@@ -1,20 +1,20 @@
 # PI-API
 
-Este projeto foi feito para colocar em prática o conteúdo de sequelize visto no curso de Desenvolvimento FullStack da DH.
+Este projeto foi feito para colocar em prática o conteúdo de sequelize visto no curso de Desenvolvimento FullStack da DH, utilizando o Projeto Integrador (PI) como tema.
 
 ## Pré-requistos
 
-[Node.js](https://nodejs.org/)
-[Yarn](https://yarnpkg.com/)
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
 
-### Tecnologias
+## Tecnologias
 
-[dotenv](https://github.com/motdotla/dotenv)
-[express](https://github.com/expressjs/express)
-[mysql2](https://github.com/sidorares/node-mysql2)
-[sequelize](https://github.com/sequelize/sequelize)
+- [dotenv](https://github.com/motdotla/dotenv)
+- [express](https://github.com/expressjs/express)
+- [mysql2](https://github.com/sidorares/node-mysql2)
+- [sequelize](https://github.com/sequelize/sequelize)
 
-### Como utilizar
+## Como utilizar
 
 1. Clone o projeto
 2. Entre na pasta
@@ -26,7 +26,7 @@ Este projeto foi feito para colocar em prática o conteúdo de sequelize visto n
 8. Rode o comando `yarn sequelize db:migrate` para executar as migrations
 9. Rode o comando `yarn dev` para iniciar o server
 
-### Todo
+## Todo
 
 - [ ] Implementar o controller de Usuário
 - [ ] Implementar o controller de Pet
