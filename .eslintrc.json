@@ -13,6 +13,7 @@
     "ecmaVersion": 11
   },
   "rules": {
-    "no-unused-vars": 1
+    "no-unused-vars": 1,
+    "import/no-dynamic-require": 1
   }
 }
