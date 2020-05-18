@@ -46,15 +46,10 @@ module.exports = {
       onUpdate: 'CASCADE',
       onDelete: 'CASCADE',
     },
-    // fk_foto_principal: {
-    //   type: Sequelize.INTEGER,
-    //   allowNull: false,
-    //   foreignKey: true,
-    //   references: {
-    //     model: "fotos",
-    //     key: "id",
-    //   },
-    // },
+    fk_foto_principal: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+    },
   }),
 
   down: (queryInterface, Sequelize) => queryInterface.dropTable('pets'),
