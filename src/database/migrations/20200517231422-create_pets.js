@@ -1,4 +1,3 @@
-
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('pets', {
     id: {
@@ -30,7 +29,7 @@ module.exports = {
       allowNull: false,
       foreignKey: true,
       references: {
-        model: 'raca',
+        model: 'racas',
         key: 'id',
       },
       onUpdate: 'CASCADE',
@@ -41,7 +40,7 @@ module.exports = {
       allowNull: false,
       foreignKey: true,
       references: {
-        model: 'usuario',
+        model: 'usuarios',
         key: 'id',
       },
       onUpdate: 'CASCADE',
@@ -52,7 +51,7 @@ module.exports = {
       allowNull: false,
       foreignKey: true,
       references: {
-        model: 'foto',
+        model: 'fotos',
         key: 'id',
       },
       onUpdate: 'CASCADE',

@@ -1,4 +1,3 @@
-
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('enderecos', {
     id: {
@@ -13,12 +12,12 @@ module.exports = {
     bairro: Sequelize.STRING(40),
     cidade: Sequelize.STRING(40),
     estado: Sequelize.STRING(2),
-    usuario_id: {
+    fk_usuario: {
       type: Sequelize.INTEGER,
       allowNull: false,
       foreignKey: true,
       references: {
-        model: 'usuario',
+        model: 'usuarios',
         key: 'id',
       },
       onUpdate: 'CASCADE',

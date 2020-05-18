@@ -1,4 +1,3 @@
-
 module.exports = {
   up: (queryInterface, Sequelize) => queryInterface.createTable('racas', {
     id: {
@@ -16,7 +15,7 @@ module.exports = {
       allowNull: false,
       foreignKey: true,
       references: {
-        model: 'especie',
+        model: 'especies',
         key: 'id',
       },
       onUpdate: 'CASCADE',
