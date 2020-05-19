@@ -24,7 +24,8 @@ Este projeto foi feito para colocar em prática o conteúdo de sequelize visto n
 6. Defina suas credências no `.env`
 7. Rode o comando `yarn sequelize db:create` para criar o banco
 8. Rode o comando `yarn sequelize db:migrate` para executar as migrations
-9. Rode o comando `yarn dev` para iniciar o server
+9. Rode o comando `yarn sequelize db:seed:all` para executar as seeds
+10. Rode o comando `yarn dev` para iniciar o server
 
 ## Todo
 

@@ -46,10 +46,7 @@ module.exports = {
       onUpdate: 'CASCADE',
       onDelete: 'CASCADE',
     },
-    fk_foto_principal: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-    },
+    fk_foto_principal: Sequelize.INTEGER,
   }),
 
   down: (queryInterface, Sequelize) => queryInterface.dropTable('pets'),
