@@ -30,3 +30,5 @@ Este projeto foi feito para colocar em prática o conteúdo de sequelize visto n
 
 - [ ] Implementar o controller de Usuário
 - [ ] Implementar o controller de Pet
+- [x] Criar seed de Especies
+- [x] Criar seed de Raças
