@@ -14,9 +14,10 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       senha: {
-        type: DataTypes.STRING(20),
+        type: DataTypes.STRING(256),
         allowNull: false,
       },
+      image: DataTypes.BLOB('long'),
       tipo: DataTypes.ENUM('PF', 'ONG'),
       descricao: DataTypes.STRING(255),
       telefone: DataTypes.STRING(10),

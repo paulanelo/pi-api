@@ -11,8 +11,9 @@ module.exports = {
       type: Sequelize.STRING(100),
       allowNull: false,
     },
+    image: Sequelize.BLOB('long'),
     senha: {
-      type: Sequelize.STRING(20),
+      type: Sequelize.STRING(256),
       allowNull: false,
     },
     tipo: Sequelize.ENUM('PF', 'ONG'),
