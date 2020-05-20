@@ -38,7 +38,6 @@ module.exports = (sequelize, DataTypes) => {
       },
       fk_foto_principal: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         foreignKey: true,
       },
     },
@@ -47,6 +46,28 @@ module.exports = (sequelize, DataTypes) => {
       timestamps: false,
     },
   );
+
+  pet.associate = (models) => {
+    pet.belongsTo(models.User, {
+      foreignKey: 'fk_usuario',
+      as: 'usuario',
+    });
+
+    pet.belongsTo(models.Raca, {
+      foreignKey: 'fk_raca',
+      as: 'raca',
+    });
+
+    pet.hasMany(models.Foto, {
+      foreignKey: 'fk_pet',
+      as: 'fotos',
+    });
+
+    pet.hasOne(models.Endereco, {
+      foreignKey: 'fk_pet',
+      as: 'endereco',
+    });
+  };
 
   return pet;
 };

@@ -31,5 +31,17 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
+  user.associate = (models) => {
+    user.hasOne(models.Endereco, {
+      foreignKey: 'fk_usuario',
+      as: 'endereco',
+    });
+
+    user.hasMany(models.Pet, {
+      foreignKey: 'fk_usuario',
+      as: 'pets',
+    });
+  };
+
   return user;
 };

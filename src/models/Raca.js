@@ -24,5 +24,12 @@ module.exports = (sequelize, DataTypes) => {
     },
   );
 
+  raca.associate = (models) => {
+    raca.belongsTo(models.Especie, {
+      foreignKey: 'fk_especie',
+      as: 'especie',
+    });
+  };
+
   return raca;
 };
