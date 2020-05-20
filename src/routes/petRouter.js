@@ -4,6 +4,7 @@ const router = Router();
 
 const PetController = require('../controllers/PetController');
 
-router.get('/', PetController.store);
+router.post('/', PetController.store);
+router.get('/:id', PetController.show);
 
 module.exports = router;
