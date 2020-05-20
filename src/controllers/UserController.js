@@ -10,7 +10,7 @@ module.exports = {
     const checkUser = await User.findOne({
       where: { email },
     });
-    if (checkUser) return res.status(200).send(errorMessage(200, 'Usuário já cadastrado'));
+    if (checkUser) return res.status(409).send(errorMessage(200, 'Usuário já cadastrado'));
 
     const { id, nome, image } = await User.create({
       email,
@@ -32,25 +32,22 @@ module.exports = {
     return res.send(user);
   },
   show: async (req, res) => {
+    console.log('aqui');
     const { id } = req.params;
     const user = await User.findOne({
       where: {
         id,
       },
+      include: ['endereco', 'pets'],
     });
-    console.log(user);
+
     return res.send(user);
-  },
-  index: async (req, res) => {
-    const users = await User.findAll();
-    return res.send(users);
   },
   delete: async (req, res) => {
     const { id } = req.params;
     const checkUser = await User.findOne({
       where: { id },
     });
-    console.log(checkUser);
     if (!checkUser) return res.status(404).send({ message: 'Usuário não encontrado' });
 
     const user = await User.destroy({
