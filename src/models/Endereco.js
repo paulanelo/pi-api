@@ -14,9 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       bairro: DataTypes.STRING(40),
       cidade: DataTypes.STRING(40),
       estado: DataTypes.STRING(2),
-      usuario_id: {
+      fk_usuario: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         foreignKey: true,
       },
     },
